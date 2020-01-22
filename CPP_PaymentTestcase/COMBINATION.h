@@ -5,9 +5,7 @@
 template <class T>
 class Combination {
 public:
-	Combination(int max_) {
-		this->max = max_;
-	}
+	Combination() = default;
 	~Combination() = default;
 	
 	std::vector <T*> combineList;

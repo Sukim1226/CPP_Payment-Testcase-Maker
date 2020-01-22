@@ -13,7 +13,7 @@ void read_product(string filename) {
 	bool tax, fee;
 
 	while (input >> name >> tax >> fee) {
-		Product *product = new Product(name, tax, fee);
+		Product * product = new Product(name, tax, fee);
 		productList.push_back(product);
 	}
 
@@ -27,11 +27,12 @@ void read_method(string filename) {
 	int cardNum;
 
 	while (input >> name >> tax >> cardNum) {
-		Method* method = new Method(name, tax);
+		Method * method = new Method(name, tax);
 		for (int i = 0; i < cardNum; i++) {
 			input >> cardName;
 			method->setCardList(cardName);
 		}
+		methodList.push_back(method);
 	}
 
 	input.close();
