@@ -1,17 +1,27 @@
 #include "PAYMENT_CLASS.h"
 
-void Product::setName(string name_) {
+using namespace std;
+
+void Discount::setName(string name_) {
 	this->name = name_;
 }
 
-void Product::setTax(bool tax_) {
-	this->tax = tax_;
+void Discount::setAlone(bool alone_) {
+	this->alone = alone_;
 }
 
-void Product::setFee(bool fee_) {
-	this->fee = fee_;
+void Discount::setComplex(bool complex_) {
+	this->complex = complex_;
 }
 
-string Product::getName(void) {
+string Discount::getName(void) {
 	return this->name;
+}
+
+bool Discount::getAlone(void) {
+	return this->alone;
+}
+
+bool Discount::getComplex(void) {
+	return this->complex;
 }

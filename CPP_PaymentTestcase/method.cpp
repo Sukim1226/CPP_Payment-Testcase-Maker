@@ -18,6 +18,14 @@ string Method::getName(void) {
 	return this->name;
 }
 
+int Method::getCardNum(void) {
+	return (int)(this->cardList).size();
+}
+
 string Method::getCardList(int idx) {
-	return cardList[idx];
+	return (this->cardList)[idx];
+}
+
+bool Method::getTax(void) {
+	return this->tax;
 }

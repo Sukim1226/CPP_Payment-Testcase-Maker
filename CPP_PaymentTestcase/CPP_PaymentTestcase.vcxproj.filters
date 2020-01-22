@@ -30,6 +30,9 @@
     <ClCompile Include="fileio.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="combination.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FILE_IO.h">

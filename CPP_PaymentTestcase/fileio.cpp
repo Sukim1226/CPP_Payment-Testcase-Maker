@@ -3,11 +3,11 @@
 
 using namespace std;
 
-std::vector <Product*> productList;
-std::vector <Method*> methodList;
-std::vector <Discount*> discountList;
+vector <Product*> productList;
+vector <Method*> methodList;
+vector <Discount*> discountList;
 
-bool read_product(string filename) {
+void read_product(string filename) {
 	ifstream input(filename.c_str());
 	string name;
 	bool tax, fee;
@@ -16,10 +16,12 @@ bool read_product(string filename) {
 		Product *product = new Product(name, tax, fee);
 		productList.push_back(product);
 	}
+
+	input.close();
 }
 
-bool read_method(string filename) {
-	ifstream input(filename.c_str());
+void read_method(string filename) {
+	ifstream input(filename.c_str(), ifstream::in);
 	string name, cardName;
 	bool tax;
 	int cardNum;
@@ -31,10 +33,12 @@ bool read_method(string filename) {
 			method->setCardList(cardName);
 		}
 	}
+
+	input.close();
 }
 
-bool read_discount(string filename) {
-	ifstream input(filename.c_str());
+void read_discount(string filename) {
+	ifstream input(filename.c_str(), ifstream::in);
 	string name;
 	bool alone, complex;
 
@@ -42,4 +46,10 @@ bool read_discount(string filename) {
 		Discount * discount = new Discount(name, alone, complex);
 		discountList.push_back(discount);
 	}
+
+	input.close();
+}
+
+void write_combination(string filename) {
+	cout << "," << endl;
 }

@@ -17,3 +17,11 @@ void Product::setFee(bool fee_) {
 string Product::getName(void) {
 	return this->name;
 }
+
+bool Product::getTax(void) {
+	return this->tax;
+}
+
+bool Product::getFee(void) {
+	return this->fee;
+}

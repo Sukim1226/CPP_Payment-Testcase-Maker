@@ -9,9 +9,9 @@ public:
 		this->tax = tax_;
 		this->fee = fee_;
 	}
-	~Product() { }
+	~Product() = default;
 
-	void setName(string name_);
+	void setName(std::string name_);
 	void setTax(bool tax_);
 	void setFee(bool fee_);
 
@@ -31,13 +31,14 @@ public:
 		this->name = name_;
 		this->tax = tax_;
 	}
-	~Method() { }
+	~Method() = default;
 
 	void setName(std::string name_);
 	void setCardList(std::string cardName_);
 	void setTax(bool tax_);
 
 	std::string getName(void);
+	int getCardNum(void);
 	std::string getCardList(int idx);
 	bool getTax(void);
 
@@ -54,13 +55,15 @@ public:
 		this->alone = alone_;
 		this->complex = complex_;
 	}
-	~Discount() { }
+	~Discount() = default;
 
-	void setName(string name_);
+	void setName(std::string name_);
 	void setAlone(bool alone);
 	void setComplex(bool complex);
 
 	std::string getName(void);
+	bool getAlone(void);
+	bool getComplex(void);
 
 private:
 	std::string name;
