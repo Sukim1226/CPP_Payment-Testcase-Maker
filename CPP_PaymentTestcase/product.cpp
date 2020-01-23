@@ -14,6 +14,10 @@ void Product::setFee(bool fee_) {
 	this->fee = fee_;
 }
 
+void Product::setMulti(bool multi_) {
+	this->multi = multi_;
+}
+
 string Product::getName(void) {
 	return this->name;
 }
@@ -24,4 +28,12 @@ bool Product::getTax(void) {
 
 bool Product::getFee(void) {
 	return this->fee;
+}
+
+bool Product::getMulti(void) {
+	return this->multi;
+}
+
+void insert_product(string name_, bool tax, bool fee_) {
+	
 }

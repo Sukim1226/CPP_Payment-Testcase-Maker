@@ -51,6 +51,14 @@ void read_discount(string filename) {
 	input.close();
 }
 
+void print_combination_num(string filename) {
+	cout << "------------------------------" << endl;
+	cout << productComb.size() << endl;
+	cout << methodComb.size() << endl;
+	cout << discountComb.size() << endl;
+	cout << "------------------------------" << endl;
+}
+
 void write_combination(string filename) {
 	cout << "," << endl;
 }

@@ -10,8 +10,8 @@ void Discount::setAlone(bool alone_) {
 	this->alone = alone_;
 }
 
-void Discount::setComplex(bool complex_) {
-	this->complex = complex_;
+void Discount::setMulti(bool multi_) {
+	this->multi = multi_;
 }
 
 string Discount::getName(void) {
@@ -22,6 +22,6 @@ bool Discount::getAlone(void) {
 	return this->alone;
 }
 
-bool Discount::getComplex(void) {
-	return this->complex;
+bool Discount::getMulti(void) {
+	return this->multi;
 }

@@ -1,6 +1,5 @@
 #pragma once
 #include "PAYMENT_CLASS.h"
-#include "FILE_IO.h"
 
 template <class T>
 class Combination {
@@ -9,5 +8,10 @@ public:
 	~Combination() = default;
 	
 	std::vector <T*> combineList;
+	std::string getCombinedString(int idx);
 
 };
+
+extern std::vector <Combination<Product>*> productComb;
+extern std::vector <Combination<Method>*> methodComb;
+extern std::vector <Combination<Discount>*> discountComb;

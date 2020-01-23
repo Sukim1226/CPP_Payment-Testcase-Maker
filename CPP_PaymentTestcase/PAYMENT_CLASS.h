@@ -14,15 +14,18 @@ public:
 	void setName(std::string name_);
 	void setTax(bool tax_);
 	void setFee(bool fee_);
+	void setMulti(bool multi);
 
 	std::string getName(void);
 	bool getTax(void);
 	bool getFee(void);
+	bool getMulti(void);
 
 private:
 	std::string name;
 	bool tax;
 	bool fee;
+	bool multi;
 };
 
 class Method {
@@ -50,23 +53,27 @@ private:
 
 class Discount {
 public:
-	Discount(std::string name_, bool alone_, bool complex_) {
+	Discount(std::string name_, bool alone_, bool multi_) {
 		this->name = name_;
 		this->alone = alone_;
-		this->complex = complex_;
+		this->multi = multi_;
 	}
 	~Discount() = default;
 
 	void setName(std::string name_);
 	void setAlone(bool alone);
-	void setComplex(bool complex);
+	void setMulti(bool multi);
 
 	std::string getName(void);
 	bool getAlone(void);
-	bool getComplex(void);
+	bool getMulti(void);
 
 private:
 	std::string name;
 	bool alone;
-	bool complex;
+	bool multi;
 };
+
+extern std::vector <Product*> productList;
+extern std::vector <Method*> methodList;
+extern std::vector <Discount*> discountList;
