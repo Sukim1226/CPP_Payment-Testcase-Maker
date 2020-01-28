@@ -8,7 +8,7 @@ public:
 	~Combination() = default;
 	
 	std::vector <T*> combineList;
-	std::string getCombinedString(int idx);
+	std::string getCombinedString(void);
 
 };
 

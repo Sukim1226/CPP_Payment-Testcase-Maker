@@ -53,8 +53,9 @@ private:
 
 class Discount {
 public:
-	Discount(std::string name_, bool alone_, bool multi_) {
+	Discount(std::string name_, bool tax_, bool alone_, bool multi_) {
 		this->name = name_;
+		this->tax = tax_;
 		this->alone = alone_;
 		this->multi = multi_;
 	}
@@ -70,6 +71,7 @@ public:
 
 private:
 	std::string name;
+	bool tax;
 	bool alone;
 	bool multi;
 };

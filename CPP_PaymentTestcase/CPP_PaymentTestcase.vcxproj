@@ -141,6 +141,7 @@
     <ClCompile Include="combination.cpp" />
     <ClCompile Include="discount.cpp" />
     <ClCompile Include="fileio.cpp" />
+    <ClCompile Include="join.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="method.cpp" />
     <ClCompile Include="product.cpp" />

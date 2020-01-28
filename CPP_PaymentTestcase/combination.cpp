@@ -88,30 +88,11 @@ void insert_discount_combination(int max_) {
 }
 
 template<class T>
-string Combination<T>::getCombinedString(int idx) {
+string Combination<T>::getCombinedString(void) {
 	string str = "";
 	for (int i = 0; i < (this->combineList).size(); i++) {
-		str += (this->combineList)[i] + " ";
+		str += (this->combineList)[i] + ",";
 	}
 
 	return str;
-}
-
-int print_join_natural(void) {
-	int cnt = 0;
-	for (int i = 0; i < productComb.size(); i++) {
-		string str;
-
-		for (int j = 0; j < discountComb.size(); j++) {
-			for (int k = 0; k < methodComb.size(); k++) {
-				
-			}
-		}
-	}
-
-	return 1;
-}
-
-void join_random(void) {
-
 }
