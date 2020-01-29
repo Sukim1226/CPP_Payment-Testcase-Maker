@@ -4,28 +4,29 @@
 
 class Product {
 public:
-	Product(std::string name_, bool tax_, bool fee_) {
+	Product(std::string name_, bool tax_, bool fee_, bool option_) {
 		this->name = name_;
 		this->tax = tax_;
 		this->fee = fee_;
+		this->option = option_;
 	}
 	~Product() = default;
 
 	void setName(std::string name_);
 	void setTax(bool tax_);
 	void setFee(bool fee_);
-	void setMulti(bool multi);
+	void setOption(bool option);
 
 	std::string getName(void);
 	bool getTax(void);
 	bool getFee(void);
-	bool getMulti(void);
+	bool getOption(void);
 
 private:
 	std::string name;
 	bool tax;
 	bool fee;
-	bool multi;
+	bool option;
 };
 
 class Method {
@@ -62,10 +63,12 @@ public:
 	~Discount() = default;
 
 	void setName(std::string name_);
+	void setTax(bool tax);
 	void setAlone(bool alone);
 	void setMulti(bool multi);
 
 	std::string getName(void);
+	bool getTax(void);
 	bool getAlone(void);
 	bool getMulti(void);
 

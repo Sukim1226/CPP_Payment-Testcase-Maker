@@ -41,10 +41,10 @@ void read_method(string filename) {
 void read_discount(string filename) {
 	ifstream input(filename.c_str(), ifstream::in);
 	string name;
-	bool alone, complex;
+	bool tax, alone, multi;
 
-	while (input >> name >> alone >> complex) {
-		Discount * discount = new Discount(name, alone, complex);
+	while (input >> name >> tax >> alone >> multi) {
+		Discount * discount = new Discount(name, tax, alone, multi);
 		discountList.push_back(discount);
 	}
 
@@ -53,9 +53,9 @@ void read_discount(string filename) {
 
 void print_combination_num(string filename) {
 	cout << "------------------------------" << endl;
-	cout << productComb.size() << endl;
-	cout << methodComb.size() << endl;
-	cout << discountComb.size() << endl;
+	cout << "상품 구분 개수: " << productComb.size() << endl;
+	cout << "할인 수단 개수: " << discountComb.size() << endl;
+	cout << "결제 수단 개수: " << methodComb.size() << endl;
 	cout << "------------------------------" << endl;
 }
 
